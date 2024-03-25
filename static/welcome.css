@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* синий цвет */
+    margin-top: 50px; /* отступ сверху */
+}
+
+p {
+    color: #333333; /* темно-серый цвет */
+    font-size: 18px; /* размер шрифта */
+    margin-bottom: 50px; /* отступ снизу */
+}

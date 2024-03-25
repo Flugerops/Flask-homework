@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизація</title>
+    <link rel="stylesheet" href="static/register.css">
 </head>
 <body>
-    <h1>Авторизація</h1>
-    <form action="{{ url_for('auth_get') }}" method="post">
-        <input type="text" name="username" placeholder="Введіть username">
-        <input type="password" name="password" placeholder="Введіть пароль">
-        <button type="submit">Увійти</button>
+    <h1>Вхід в аккаунт</h1>
+    <form action="{{ url_for('auth_post') }}" method="post">
+    <input type="text" name="username" placeholder="Введіть юзернейм">
+    <input type="password" name="password" placeholder="Введіть пароль">
+    <button type="submit">Зберігти</button>
+
     </form>
-    <p>{{ message }}</p>
+    <h2>{{message}}</h2>
+
 </body>
 </html>
