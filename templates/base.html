@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiini Novaroti</title>
+</head>
+<body>
+    <h1>Меню</h1>
+    <p>Введіть ваш username та пароль, щоб увійти:</p>
+    <a href="{{ url_for('auth_post') }}">Вхід</a>
+    <p>Ще не зареєстровані? </p>
+    <a href="{{ url_for('register_post') }}">Реєстрація</a>
+</body>
+</html>
