@@ -1,0 +1,5 @@
+{% block content %}
+<h1>Our Hobbies</h1>
+{% from '_helpers.html' import render_iterable %}
+{{ render_iterable(ourhobbies) }}
+{% endblock %}

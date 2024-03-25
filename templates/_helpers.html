@@ -1,0 +1,25 @@
+{% macro render_iterable(iterable, outer_tag='ul', inner_tag='li') %}
+    <{{outer_tag}}>
+    {% if iterable|attr('items') %}
+        {% for key, val in iterable.items() %}
+            <{{inner_tag}}>
+                <em>{{key}}</em>: {{val}}
+            </{{inner_tag}}>
+        {% endfor %}
+    {% else %}
+        {% for item in iterable %}
+            {% if item|attr('items') %}
+                {% for key, val in item.items() %}
+                    <{{inner_tag}}>
+                        <em>{{key}}</em>: {{val}}
+                    </{{inner_tag}}>
+                {% endfor %}
+            {% else %}
+            <{{inner_tag}}>
+                <em>{{item}}</em>
+            </{{inner_tag}}>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </{{outer_tag}}>
+{% endmacro %} 
