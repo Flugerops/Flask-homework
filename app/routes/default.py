@@ -33,7 +33,7 @@ def register_post():
     password = request.form['password']
 
     if username in users:
-        return render_template('register.html', message="Такий користувач вже існує")
+        return render_template('register.html', message="Такий користувач вже існує!")
     
     else:
         users[username] = {"password" : password}
